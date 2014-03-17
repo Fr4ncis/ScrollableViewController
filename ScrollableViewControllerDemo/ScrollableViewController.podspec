@@ -9,6 +9,6 @@ Pod::Spec.new do |s|
 # Source Info
   s.platform     =  :ios, '7.0'
   s.source  = { :git => "https://github.com/Fr4ncis/ScrollableViewController.git", :tag => "0.0.2" }
-  s.source_files = ['ScrollableViewControllerDemo/ScrollableViewController/','ScrollableViewControllerDemo/ScrollableViewController/**/*.{h,m}']
+  s.source_files = ['ScrollableViewController/','ScrollableViewController/**/*.{h,m}']
   s.requires_arc = true
 end
