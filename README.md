@@ -1,6 +1,6 @@
 ScrollableViewController
 ========================
-![image](scrollable-video.gif)
+![image](Assets/scrollable-video.gif)
 
 A Twitter.app-like scrollable view controller, subclasses UITabBarController. An animated gif is better than a thousand words.
 
@@ -18,6 +18,33 @@ We will soon fully support Cocoapods to provide an even easier method to integra
 Getting started
 ---------------
 
+After integrating ScrollableViewController into your project, using it is as easy as turning a UITabBarController into a ScrollableViewController!
+
+### If you're using nib files / storyboards:
+* Make sure you have a UINavigationController with a UITabBarController as a rootviewcontroller.
+* In the third panel on the right (Identity Inspector) set the UITabBarController to custom class ScrollableViewController.
+* Profit!
+
+![image](Assets/howto_scrollable.jpg)
+
+
+### If you want to do things the hardcore way (programmatically):
+
+You instantiate a ScrollableViewController and its children viewcontrollers.
+
+
+	ScrollableViewController *tabBar = [[ScrollableViewController alloc] init];
+    tabBar.viewControllers = @[[ViewController new],[ViewController new],[ViewController new]];
+    
+You have to set the titles for the viewcontrollers yourself.
+
+    tabBar.titles = @[@"First",@"Second",@"Third"];
+    
+Embed the ScrollableViewController in a navigation controller.
+    
+    UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:tabBar];
+    
+and don't forget `#import <ScrollableViewController.h>`
 
 
 Technical details
@@ -26,10 +53,6 @@ Technical details
 The library has been written using ARC. It can still be used on non-ARC projects by enabling the `-fobj-arc` compiler flag on the *.m files*.
 
 The library supports **iOS 7 only** but it should be straightforward to backport it to iOS5/6.
-
-Demo Project
-------------
-You don't need to import ScrollableViewControllerDemo project, but it could be useful to under
 
 Contributors
 ------------
