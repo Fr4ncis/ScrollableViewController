@@ -9,9 +9,9 @@ Installation
 
 ScrollableViewController can be installed by copying the files inside the *ScrollableViewController* directory.
 
-There is also a *OpenSpritzDemo/OSSpritz.podspec* **podspec file** you can easily add OSSpritz to your project adding this line to your Podfile:
+There is also a *ScrollableViewController.podspec* **podspec file** you can easily add OSSpritz to your project adding this line to your Podfile:
 
-	pod "ScrollableViewController", :podspec => "https://raw.github.com/Fr4ncis/openspritz-ios/master/OpenSpritzDemo/OSSpritz.podspec"
+	pod "ScrollableViewController", :podspec => "https://raw.github.com/Fr4ncis/ScrollableViewController/master/ScrollableViewController.podspec"
 	
 We will soon fully support Cocoapods to provide an even easier method to integrate it in your project.
 
